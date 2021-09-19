@@ -7875,7 +7875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7218517424982486931, guid: 9800784c2697da74a944c3ef9da3336f, type: 3}
       propertyPath: m_Name
-      value: Gun Laser
+      value: Laser Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9800784c2697da74a944c3ef9da3336f, type: 3}
