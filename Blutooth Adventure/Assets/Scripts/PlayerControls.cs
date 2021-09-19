@@ -1,20 +1,23 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerControls : MonoBehaviour
 {
 /// ********IF YOU CAN'T SEE THE DOCUMENTATION WHEN YOU HOVER OVER METHODS OR SHIT LIKE THAT IT'S LIKELY BECAUSE YOU HAVEN'T SELECTED THE PROJECT WITH THE .SLN FILE ******\\\\\
-    [SerializeField] InputAction movement;
-    [SerializeField] InputAction fire;
+    [Header("General Setup Settings")]
+    [Tooltip("Moves character in 2d space based on player input")][SerializeField] InputAction movement;
+    [Tooltip("Activate and deactivate lasers based on player input")][SerializeField] InputAction fire;
+    [Tooltip("Array for lasers; one on each hand")][SerializeField] GameObject[] lasers;
 
-    [SerializeField] float controlSpeed = 10f;
-    [SerializeField] float xRange = 5f;
-    [SerializeField] float yRange = 2f;
-    [SerializeField] float positionPitchFactor = -20f;
-    [SerializeField] float controlPitchFactor = -10f;
-    [SerializeField] float positionYawFactor = -20f; // not used
-    [SerializeField] float controlYawFactor = 20f; // how much character "turns" as you push the control stick
-    [SerializeField] float positionRollFactor = -20f;
-    [SerializeField] float controlRollFactor = -10f;
+    [Tooltip("How fast the player moves")][SerializeField] float controlSpeed = 10f;
+    [Tooltip("Available amt of moveable horizontal distance")][SerializeField] float xRange = 5f;
+    [Tooltip("Available amt of moveable vertical distance")][SerializeField] float yRange = 2f;
+    [Tooltip("Degree of character tilt on x-axis due to position")][SerializeField] float positionPitchFactor = -20f;
+    [Tooltip("Degree of character tilt on x-axis due to stick tilt")][SerializeField] float controlPitchFactor = -10f;
+    [Tooltip("Degree of character tilt on y-axis due to position")][SerializeField] float positionYawFactor = -20f; // not used
+    [Tooltip("Degree of character tilt on y-axis due to stick tilt")][SerializeField] float controlYawFactor = 20f; // how much character "turns" as you push the control stick
+    [Tooltip("Degree of character tilt on z-axis due to position")][SerializeField] float positionRollFactor = -20f;
+    [Tooltip("Degree of character tilt on z-axis due to stick tilt")][SerializeField] float controlRollFactor = -10f;
 
     float xThrow, yThrow;
 
@@ -57,7 +60,7 @@ public class PlayerControls : MonoBehaviour
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
-    private void ProcessTranslation()
+    void ProcessTranslation()
     {
         xThrow = movement.ReadValue<Vector2>().x;
         yThrow = movement.ReadValue<Vector2>().y;
@@ -77,9 +80,19 @@ public class PlayerControls : MonoBehaviour
     {
         float isFiring = fire.ReadValue<float>();
 
-        if (isFiring > 0.5) 
-            Debug.Log("Laser Fired!");
+        if (isFiring > 0.5) //if the player pulls down the trigger enough.
+            SetLasersActive(true);
         else 
-            Debug.Log("I'm not shooting");
+            SetLasersActive(false);
     }
+
+    void SetLasersActive(bool isActive)
+    {
+        foreach(GameObject laser in lasers)
+        {
+           var emissionModule = laser.GetComponent<ParticleSystem>().emission; // my first use of var!!! use when you're not sure what type you're working with.
+           emissionModule.enabled = isActive;
+        }
+    }
+
 }
