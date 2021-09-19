@@ -27,11 +27,13 @@ public class PlayerControls : MonoBehaviour
     void OnEnable() 
     {
         movement.Enable();
+        fire.Enable();
     }
 
     void OnDisable() 
     {
-        movement.Disable();   
+        movement.Disable(); 
+        fire.Disable();  
     }
 
     // Update is called once per frame
@@ -39,7 +41,7 @@ public class PlayerControls : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
-
+        ProcessFiring();
     }
 
     void ProcessRotation()
@@ -69,5 +71,15 @@ public class PlayerControls : MonoBehaviour
         float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+    }
+
+    void ProcessFiring()
+    {
+        float isFiring = fire.ReadValue<float>();
+
+        if (isFiring > 0.5) 
+            Debug.Log("Laser Fired!");
+        else 
+            Debug.Log("I'm not shooting");
     }
 }
