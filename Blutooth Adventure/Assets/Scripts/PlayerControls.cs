@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerControls : MonoBehaviour
 {
-
+/// ********IF YOU CAN'T SEE THE DOCUMENTATION WHEN YOU HOVER OVER METHODS OR SHIT LIKE THAT IT'S LIKELY BECAUSE YOU HAVEN'T SELECTED THE PROJECT WITH THE .SLN FILE ******\\\\\
     [SerializeField] InputAction movement;
     [SerializeField] InputAction fire;
 
