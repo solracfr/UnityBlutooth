@@ -217,6 +217,18 @@ PrefabInstance:
       propertyPath: controlYawFactor
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 565259754, guid: b8b1f673afe204743824d4094dc4d7ca, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 565259754, guid: b8b1f673afe204743824d4094dc4d7ca, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 3197146437273783548}
+    - target: {fileID: 565259754, guid: b8b1f673afe204743824d4094dc4d7ca, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 6469670652857563652}
     - target: {fileID: 1965107420363712, guid: b8b1f673afe204743824d4094dc4d7ca, type: 3}
       propertyPath: m_Name
       value: Player
@@ -358,5 +370,15 @@ PrefabInstance:
 --- !u!4 &5722173337043024775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4393496376346426, guid: b8b1f673afe204743824d4094dc4d7ca, type: 3}
+  m_PrefabInstance: {fileID: 5721442387662519485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3197146437273783548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7149515223951519809, guid: b8b1f673afe204743824d4094dc4d7ca, type: 3}
+  m_PrefabInstance: {fileID: 5721442387662519485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6469670652857563652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1634321401783813817, guid: b8b1f673afe204743824d4094dc4d7ca, type: 3}
   m_PrefabInstance: {fileID: 5721442387662519485}
   m_PrefabAsset: {fileID: 0}

@@ -7453,6 +7453,9 @@ GameObject:
   - component: {fileID: 4393496376346426}
   - component: {fileID: 95664687578323722}
   - component: {fileID: 565259754}
+  - component: {fileID: 1639602506546292573}
+  - component: {fileID: 8103556342335458920}
+  - component: {fileID: 3768116555465256767}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7591,6 +7594,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Fire
       m_Flags: 0
+  lasers: []
   controlSpeed: 5.5
   xRange: 5
   yRange: 2
@@ -7600,6 +7604,47 @@ MonoBehaviour:
   controlYawFactor: -10
   positionRollFactor: -20
   controlRollFactor: -10
+--- !u!65 &1639602506546292573
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965107420363712}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.75, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!54 &8103556342335458920
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965107420363712}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3768116555465256767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965107420363712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84734dbbfdc67b459fba22163b85071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1968470488432234
 GameObject:
   m_ObjectHideFlags: 0
