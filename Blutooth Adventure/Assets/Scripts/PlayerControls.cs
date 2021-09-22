@@ -39,6 +39,7 @@ public class PlayerControls : MonoBehaviour
         fire.Disable();  
     }
 
+
     // Update is called once per frame
     void Update()
     {
