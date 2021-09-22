@@ -212,6 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 463697135}
   - component: {fileID: 463697134}
+  - component: {fileID: 463697136}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -253,6 +254,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &463697136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463697133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fd77eb6e45c5f44961eaa06fa6b68d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &688245112
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +278,7 @@ GameObject:
   - component: {fileID: 688245115}
   - component: {fileID: 688245114}
   - component: {fileID: 688245113}
+  - component: {fileID: 688245117}
   m_Layer: 0
   m_Name: Bridge
   m_TagString: Untagged
@@ -280,7 +294,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688245112}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -342,12 +356,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688245112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 487.36, y: 2.09, z: 133.58}
+  m_LocalPosition: {x: 487.36, y: 3.69, z: 133.58}
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &688245117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688245112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fd77eb6e45c5f44961eaa06fa6b68d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
