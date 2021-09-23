@@ -10,22 +10,25 @@ public class CollisionHandler : MonoBehaviour
 
     private string reloadLevel = "ReloadLevel";
 
-    // Start is called before the first frame update
-    void OnCollisionEnter(Collision other) 
+
+    // Update is called once per frame
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(this.name + " collided with " + other.gameObject.name); // "this.name" does the same thing as "gameObject.name"
+        //Debug.Log($"{this.name} has triggered {other.gameObject.name}"); // printing to the log using string interpolation
+
+        StartCrashSequence();
+    }
+
+    private void StartCrashSequence()
+    {
         GetComponent<PlayerControls>().enabled = false;
         Invoke(reloadLevel, loadLevelDelay); // remember that method name should be a string
     }
 
     void ReloadLevel()
     {
-        SceneManager.LoadScene(1); // change number arg to something else later
-    }
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
 
-    // Update is called once per frame
-    private void OnTriggerEnter(Collider other) 
-    {
-        Debug.Log($"{this.name} has triggered {other.gameObject.name}"); // printing to the log using string interpolation
+        SceneManager.LoadScene(currentLevel);
     }
 }
