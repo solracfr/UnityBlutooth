@@ -10,6 +10,9 @@ public class CollisionHandler : MonoBehaviour
 
     private string reloadLevel = "ReloadLevel";
 
+    [SerializeField] ParticleSystem explosionVFX; // particle system attached to player
+    [SerializeField] GameObject playerBody; // GameObject for player model that is visible to player;
+
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
@@ -22,6 +25,9 @@ public class CollisionHandler : MonoBehaviour
     private void StartCrashSequence()
     {
         GetComponent<PlayerControls>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+        explosionVFX.Play();
+        playerBody.SetActive(false);
         Invoke(reloadLevel, loadLevelDelay); // remember that method name should be a string
     }
 
