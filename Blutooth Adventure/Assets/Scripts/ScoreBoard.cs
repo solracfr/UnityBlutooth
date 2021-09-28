@@ -18,6 +18,5 @@ public class ScoreBoard : MonoBehaviour
     {
         score += amtToIncrease;
         scoreText.text = score.ToString();
-        Debug.Log($"Score is now {score}.");
     }
 }

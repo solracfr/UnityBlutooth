@@ -267,8 +267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 0}
+  hitVFX: {fileID: 0}
   parent: {fileID: 0}
   enemyScoreValue: 0
+  enemyHP: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +345,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.3154126e+34, y: -5.3099853e+33, z: 4.5904e-41, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -0.0000000045356963}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -422,6 +424,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1354969390}
     - target: {fileID: 934195158903069637, guid: 5566ac4be70b2d74199e22cce64897b4, type: 3}
+      propertyPath: enemyHP
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 934195158903069637, guid: 5566ac4be70b2d74199e22cce64897b4, type: 3}
       propertyPath: enemyScoreValue
       value: 1
       objectReference: {fileID: 0}
@@ -486,6 +492,10 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1354969390}
+    - target: {fileID: 934195158903069637, guid: 5566ac4be70b2d74199e22cce64897b4, type: 3}
+      propertyPath: enemyHP
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 934195158903069637, guid: 5566ac4be70b2d74199e22cce64897b4, type: 3}
       propertyPath: enemyScoreValue
       value: 1
@@ -608,6 +618,10 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1354969390}
+    - target: {fileID: 934195158903069637, guid: 5566ac4be70b2d74199e22cce64897b4, type: 3}
+      propertyPath: enemyHP
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 934195158903069637, guid: 5566ac4be70b2d74199e22cce64897b4, type: 3}
       propertyPath: enemyScoreValue
       value: 1
@@ -911,6 +925,10 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1354969390}
+    - target: {fileID: 934195158903069637, guid: 5566ac4be70b2d74199e22cce64897b4, type: 3}
+      propertyPath: enemyHP
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 934195158903069637, guid: 5566ac4be70b2d74199e22cce64897b4, type: 3}
       propertyPath: enemyScoreValue
       value: 1

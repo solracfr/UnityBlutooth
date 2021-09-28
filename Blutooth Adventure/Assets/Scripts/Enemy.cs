@@ -5,9 +5,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
+    [SerializeField] GameObject hitVFX;
     [SerializeField] Transform parent;
     [SerializeField] int enemyScoreValue;
-
+    [SerializeField] int enemyHP;
     ScoreBoard scoreBoard; // so script class names can be used as var types!!!
 
     void Start() 
@@ -18,18 +19,27 @@ public class Enemy : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
         ProcessHit();
-        KillEnemy();
+
+        if (enemyHP < 1) // you could get in trouble if you have a strict condition like == 0
+            KillEnemy();
     }
 
-    private void KillEnemy()
+    void KillEnemy()
     {
-        GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity); // creates GameObject for instance of vfx; requires particle effects to "play on Awake"
-        vfx.transform.parent = parent; // dumps GameObject of vfx instance to "Spawn At Runtime" GameObject
+        TriggerVFX(deathVFX);
         Destroy(this.gameObject);
     }
 
-    private void ProcessHit()
+    void ProcessHit()
     {
-        scoreBoard.IncreaseScore(enemyScoreValue);
+        enemyHP--;
+        TriggerVFX(hitVFX);
+        scoreBoard.IncreaseScore(enemyScoreValue); 
+    }
+
+    void TriggerVFX(GameObject VFX)
+    {
+        GameObject vfx = Instantiate(VFX, transform.position, Quaternion.identity); // creates GameObject for instance of vfx; requires particle effects to "play on Awake"
+        vfx.transform.parent = parent; // dumps GameObject of vfx instance to "Spawn At Runtime" GameObject
     }
 }

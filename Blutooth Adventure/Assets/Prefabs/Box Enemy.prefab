@@ -109,5 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 7286979576836806290, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+  hitVFX: {fileID: 3692402367238337648, guid: 971afde7b002d5a4781f4db8b9685cee, type: 3}
   parent: {fileID: 0}
   enemyScoreValue: 1
+  enemyHP: 0
