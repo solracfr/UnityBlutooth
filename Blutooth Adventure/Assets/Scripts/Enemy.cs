@@ -9,11 +9,21 @@ public class Enemy : MonoBehaviour
     [SerializeField] Transform parent;
     [SerializeField] int enemyScoreValue;
     [SerializeField] int enemyHP;
-    ScoreBoard scoreBoard; // so script class names can be used as var types!!!
+    ScoreBoard _scoreBoard; // so script class names can be used as var types!!!
+    Rigidbody _rigidbody;
 
-    void Start() 
+    void Start()
     {
-        scoreBoard = FindObjectOfType<ScoreBoard>(); // resource intensive and risky, but we can safely use here because there is only one scoreboard to refer to, and not many enemies appear
+        _scoreBoard = FindObjectOfType<ScoreBoard>(); // resource intensive and risky, 
+                                                      // but we can safely use here because there is only one scoreboard to refer to, and not many enemies appear
+        //AddRigidBody(); // currently unused.
+    }
+
+    void AddRigidBody()
+    {
+        _rigidbody = this.gameObject.AddComponent<Rigidbody>();
+        _rigidbody.useGravity = false;
+        _rigidbody.isKinematic = true;
     }
 
     void OnParticleCollision(GameObject other)
@@ -34,7 +44,7 @@ public class Enemy : MonoBehaviour
     {
         enemyHP--;
         TriggerVFX(hitVFX);
-        scoreBoard.IncreaseScore(enemyScoreValue); 
+        _scoreBoard.IncreaseScore(enemyScoreValue); 
     }
 
     void TriggerVFX(GameObject VFX)
