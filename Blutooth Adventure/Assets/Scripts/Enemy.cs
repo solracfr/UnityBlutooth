@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
     [SerializeField] GameObject hitVFX;
-    [SerializeField] Transform parent;
+    [SerializeField] GameObject parentGameObject;
     [SerializeField] int enemyScoreValue;
     [SerializeField] int enemyHP;
     ScoreBoard _scoreBoard; // so script class names can be used as var types!!!
@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     {
         _scoreBoard = FindObjectOfType<ScoreBoard>(); // resource intensive and risky, 
                                                       // but we can safely use here because there is only one scoreboard to refer to, and not many enemies appear
+        parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
         //AddRigidBody(); // currently unused.
     }
 
@@ -50,6 +51,7 @@ public class Enemy : MonoBehaviour
     void TriggerVFX(GameObject VFX)
     {
         GameObject vfx = Instantiate(VFX, transform.position, Quaternion.identity); // creates GameObject for instance of vfx; requires particle effects to "play on Awake"
-        vfx.transform.parent = parent; // dumps GameObject of vfx instance to "Spawn At Runtime" GameObject
+        vfx.transform.parent = parentGameObject.transform; // dumps GameObject of vfx instance to "Spawn At Runtime" GameObject
+                                                 // use Transforms to nest GameObjects into parents
     }
 }

@@ -4754,7 +4754,7 @@ MonoBehaviour:
   hitVFX: {fileID: 3692402367238337648, guid: 971afde7b002d5a4781f4db8b9685cee, type: 3}
   parent: {fileID: 0}
   enemyScoreValue: 5
-  enemyHP: 75
+  enemyHP: 10
 --- !u!65 &3791775948282667219
 BoxCollider:
   m_ObjectHideFlags: 0
