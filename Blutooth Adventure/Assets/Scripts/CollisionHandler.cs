@@ -18,8 +18,8 @@ public class CollisionHandler : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log($"{this.name} has triggered {other.gameObject.name}"); // printing to the log using string interpolation
-
-        StartCrashSequence();
+        if (other.tag != "Environment") // TODO: DELETE AFTER PLAYER RIG TIMELINE FIXED
+            StartCrashSequence();
     }
 
     private void StartCrashSequence()

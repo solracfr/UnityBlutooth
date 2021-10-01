@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpawnAtRuntime
+  - Environment
   layers:
   - Default
   - TransparentFX
