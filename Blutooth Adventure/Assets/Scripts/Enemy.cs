@@ -39,13 +39,13 @@ public class Enemy : MonoBehaviour
     {
         TriggerVFX(deathVFX);
         Destroy(this.gameObject);
+        _scoreBoard.IncreaseScore(enemyScoreValue); 
     }
 
     void ProcessHit()
     {
         enemyHP--;
         TriggerVFX(hitVFX);
-        _scoreBoard.IncreaseScore(enemyScoreValue); 
     }
 
     void TriggerVFX(GameObject VFX)
