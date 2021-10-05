@@ -5690,9 +5690,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36fd77eb6e45c5f44961eaa06fa6b68d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 7286979576836806290, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+  deathFX: {fileID: 7286979576836806290, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
   hitVFX: {fileID: 3692402367238337648, guid: 971afde7b002d5a4781f4db8b9685cee, type: 3}
-  parent: {fileID: 0}
+  parentGameObject: {fileID: 0}
   enemyScoreValue: 4
   enemyHP: 50
 --- !u!65 &1870173034120649700

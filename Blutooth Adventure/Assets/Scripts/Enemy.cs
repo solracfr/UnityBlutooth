@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] GameObject deathVFX;
+    [SerializeField] GameObject deathFX;
     [SerializeField] GameObject hitVFX;
     [SerializeField] GameObject parentGameObject;
     [SerializeField] int enemyScoreValue;
@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
 
     void KillEnemy()
     {
-        TriggerVFX(deathVFX);
+        TriggerVFX(deathFX);
         Destroy(this.gameObject);
         _scoreBoard.IncreaseScore(enemyScoreValue); 
     }
@@ -48,10 +48,10 @@ public class Enemy : MonoBehaviour
         TriggerVFX(hitVFX);
     }
 
-    void TriggerVFX(GameObject VFX)
+    void TriggerVFX(GameObject FX)
     {
-        GameObject vfx = Instantiate(VFX, transform.position, Quaternion.identity); // creates GameObject for instance of vfx; requires particle effects to "play on Awake"
-        vfx.transform.parent = parentGameObject.transform; // dumps GameObject of vfx instance to "Spawn At Runtime" GameObject
+        GameObject fx = Instantiate(FX, transform.position, Quaternion.identity); // creates GameObject for instance of vfx; requires particle effects to "play on Awake"
+        fx.transform.parent = parentGameObject.transform; // dumps GameObject of vfx instance to "Spawn At Runtime" GameObject
                                                  // use Transforms to nest GameObjects into parents
     }
 }

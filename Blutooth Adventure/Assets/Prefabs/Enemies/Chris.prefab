@@ -4657,6 +4657,7 @@ Transform:
   - {fileID: 6017641948993492718}
   - {fileID: 6025155398107375620}
   - {fileID: 6017523855975289024}
+  - {fileID: 2062047388928863058}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4750,9 +4751,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36fd77eb6e45c5f44961eaa06fa6b68d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 7286979576836806290, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+  deathFX: {fileID: 7286979576836806290, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
   hitVFX: {fileID: 3692402367238337648, guid: 971afde7b002d5a4781f4db8b9685cee, type: 3}
-  parent: {fileID: 0}
+  parentGameObject: {fileID: 0}
   enemyScoreValue: 5
   enemyHP: 10
 --- !u!65 &3791775948282667219
@@ -7748,3 +7749,65 @@ Transform:
   m_Father: {fileID: 6017761305815578052}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8772256150843440579
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6024853444246867690}
+    m_Modifications:
+    - target: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 487.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 128.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286979576836806290, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+      propertyPath: m_Name
+      value: Enemy Explosion VFX & SFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+--- !u!4 &2062047388928863058 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7286979576836806289, guid: fb751c4ba34690241871cdc6cd01b8af, type: 3}
+  m_PrefabInstance: {fileID: 8772256150843440579}
+  m_PrefabAsset: {fileID: 0}
